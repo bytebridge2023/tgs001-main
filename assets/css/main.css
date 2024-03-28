@@ -19,7 +19,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #5e1361;
   --color-secondary: #161718;
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #32cf93;
+  color: #5e1361;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ h6 {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #5bd9a9;
+  background: #5e1361;
   margin: 4px 10px;
 }
 
@@ -135,7 +135,7 @@ h6 {
 }
 
 .page-header .cta-btn:hover {
-  background: #2cbc85;
+  background: #5e1361;
 }
 
 /*--------------------------------------------------------------
@@ -162,7 +162,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background: rgba(39, 167, 118, 0.8);
+  background: rgba(152, 39, 167, 0.8);
   color: #fff;
 }
 
@@ -904,7 +904,7 @@ h6 {
 }
 
 .gallery-single .portfolio-info .btn-visit:hover {
-  background: #2cbc85;
+  background: #5e1361;
 }
 
 .gallery-single .portfolio-description h2 {
@@ -950,7 +950,7 @@ h6 {
 
 .gallery-single .portfolio-description .testimonial-item .quote-icon-left,
 .gallery-single .portfolio-description .testimonial-item .quote-icon-right {
-  color: #5bd9a9;
+  color: #5e1361;
   font-size: 26px;
   line-height: 0;
 }
@@ -1274,7 +1274,7 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: #5e1361;
 }
 
 @media (max-width: 768px) {
