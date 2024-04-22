@@ -9,9 +9,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/TGS_Favicon.png" rel="icon">
-  <link href="assets/img/TGS_Favicon.png" rel="apple-touch-icon">
+  <!-- Favicons --> 
+  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="icon">
+  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,33 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script>
+const images = document.querySelectorAll('.lazyload');
+
+const options = {
+  root: document.querySelector('body'), // Change this to a specific container if needed
+  threshold: 0.5, // Image will load when 50% in viewport
+};
+
+const lazyLoad = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove('lazyload');
+      observer.unobserve(img);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(lazyLoad, options);
+
+images.forEach((image) => {
+  observer.observe(image);
+});
+
+</script>
+
 
 </head>
 
@@ -41,7 +68,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/tsg.png" alt="">
+        <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F3cve2_tsg.png?alt=media&token=2202a32a-ff94-48bb-93fe-1af954b8e294" alt="">
         <!-- <i class="bi bi-camera"></i>
         <h1>Photography</h1> -->
       </a>
@@ -67,14 +94,14 @@
               </li> -->
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
+          <li class=""><a href="services.html"><span>Services</span> <i class="active"></i></a>
+               <!-- <ul>
                   <li><a href="#">Films and Documentaries</a></li>
                   <li><a href="#">Portraits</a></li>
                   <li><a href="#">Corporate/Academic & Social Events</a></li>
                   <li><a href="#">Branding and Portfolio Curation</a></li>
                   <li><a href="#">Introduction to Storytelling (Photography Class)</a></li>
-                </ul>
+                </ul> -->
               </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -118,7 +145,7 @@
 
           <!--          <div class="col-xl-3 col-lg-4 col-md-6">-->
           <!--            <div class="gallery-item h-100">-->
-          <!--              <img src="assets/img/gallery/gallery-1-ss.jpg" class="img-fluid" alt="">-->
+          <!--              <img src="assets/img/gallery/gallery-1-ss.jpg" class="img-fluid lazyload" alt="">-->
           <!--              <div class="gallery-links d-flex align-items-center justify-content-center">-->
           <!--                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>-->
           <!--                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
@@ -129,21 +156,22 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="https://res.cloudinary.com/waterndesert/image/upload/v1711716027/TGS/homepage_picture1.jpg" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fdwyog_Untitled%20design.png?alt=media&token=4082f800-2bf4-491b-a01a-2043c049ed22" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="https://res.cloudinary.com/waterndesert/image/upload/v1711716027/TGS/homepage_picture1.jpg" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fdwyog_Untitled%20design.png?alt=media&token=4082f800-2bf4-491b-a01a-2043c049ed22" title="Artist-Performance" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
+          <!-- End Gallery Item -->
 
 
           <div class="col-xl-3 col-lg-4 col-md-6 ">
             <div class="gallery-item h-100">
-              <img src="https://res.cloudinary.com/waterndesert/image/upload/v1712830128/TGS/homepage_picture2.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fu09ca_TGS_gallery_11.png?alt=media&token=be23310d-686c-4c62-8926-0736543dc000" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="https://res.cloudinary.com/waterndesert/image/upload/v1712830128/TGS/homepage_picture2.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fu09ca_TGS_gallery_11.png?alt=media&token=be23310d-686c-4c62-8926-0736543dc000" title="Falz-On-Stage" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -152,9 +180,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="https://res.cloudinary.com/waterndesert/image/upload/v1711715798/TGS/homepage_pictures3.jpg" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fo314a_TGS_gallery_6.png?alt=media&token=4fbec72e-4cdc-4a98-819d-d0a7df4736ce" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="https://res.cloudinary.com/waterndesert/image/upload/v1711715798/TGS/homepage_pictures3.jpg" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fo314a_TGS_gallery_6.png?alt=media&token=4fbec72e-4cdc-4a98-819d-d0a7df4736ce" title="Gallery 1" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -163,9 +191,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_3.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fy1ht8_Untitled%20desikjhvbgn.png?alt=media&token=5d989b14-af39-44a7-9ed7-c05edea56197" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_3.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fy1ht8_Untitled%20desikjhvbgn.png?alt=media&token=5d989b14-af39-44a7-9ed7-c05edea56197" title="Emir-Of-Kano" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -174,9 +202,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_4.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fmjv46_jsbjkn.png?alt=media&token=20ab8b97-f924-427f-9af5-b75ab6ac3de1" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_4.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fmjv46_jsbjkn.png?alt=media&token=20ab8b97-f924-427f-9af5-b75ab6ac3de1" title="Gallery 1" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -185,9 +213,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_5.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F0ybep_TGS_gallery_5.png?alt=media&token=90217c16-3ee1-44eb-b46b-cce8bf58d784" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_5.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F0ybep_TGS_gallery_5.png?alt=media&token=90217c16-3ee1-44eb-b46b-cce8bf58d784" title="Gallery 1" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -196,9 +224,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_6.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Faz4ka_blsdjkawe.png?alt=media&token=4ff3cd0c-6247-4a7e-a630-80ea32070b03" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_6.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Faz4ka_blsdjkawe.png?alt=media&token=4ff3cd0c-6247-4a7e-a630-80ea32070b03g" title="Nature" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -207,9 +235,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_7.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fsc8z1_jhdhudbh.png?alt=media&token=052a6540-e078-4382-a66a-ae81b9b765a0" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_7.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fsc8z1_jhdhudbh.png?alt=media&token=052a6540-e078-4382-a66a-ae81b9b765a0" title="Gallery 1" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -218,9 +246,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_8.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fqu12v_dgtez.png?alt=media&token=eccc5625-a816-4f55-8beb-7ac1b7f86079" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_8.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fqu12v_dgtez.png?alt=media&token=eccc5625-a816-4f55-8beb-7ac1b7f86079" title="Girl-Standing" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -229,14 +257,26 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/TGS_gallery_9.png" class="img-fluid" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fwwamc_sdghvsdjh.png?alt=media&token=902e6225-ac7a-4d94-bc59-7e19e4f15c6b" class="img-fluid lazyload" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/TGS_gallery_9.png" title="Gallery 1" class="glightbox preview-link"><i
+                <a href="ahttps://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fwwamc_sdghvsdjh.png?alt=media&token=902e6225-ac7a-4d94-bc59-7e19e4f15c6b" title="Gallery 1" class="glightbox preview-link"><i
                     class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
+          
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100">
+              <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F6yca2_15.png?alt=media&token=db60ac76-7476-44ff-913c-3c6bdabf4d57" class="img-fluid lazyload" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F6yca2_15.png?alt=media&token=db60ac76-7476-44ff-913c-3c6bdabf4d57" title="Gallery 1" class="glightbox preview-link"><i
+                    class="bi bi-arrows-angle-expand"></i></a>
+                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Gallery Item -->
 
 
 
@@ -281,6 +321,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
 
 </body>
 

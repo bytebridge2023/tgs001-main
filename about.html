@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/TGS_Favicon.png" rel="icon">
-  <link href="assets/img/TGS_Favicon.png" rel="apple-touch-icon">
+  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="icon">
+  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,32 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+<script>
+const images = document.querySelectorAll('.lazyload');
+
+const options = {
+  root: document.querySelector('body'), // Change this to a specific container if needed
+  threshold: 0.5, // Image will load when 50% in viewport
+};
+
+const lazyLoad = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove('lazyload');
+      observer.unobserve(img);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(lazyLoad, options);
+
+images.forEach((image) => {
+  observer.observe(image);
+});
+
+</script>
 
 </head>
 
@@ -41,7 +67,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/tsg.png" alt="">
+        <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F3cve2_tsg.png?alt=media&token=2202a32a-ff94-48bb-93fe-1af954b8e294" alt="">
         <!-- <i class="bi bi-camera"></i>
         <h1>Photography</h1> -->
       </a>
@@ -67,14 +93,14 @@
               </li> -->
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
+          <li class=""><a href="services.html"><span>Services</span> <i class="active"></i></a>
+               <!-- <ul>
                   <li><a href="#">Films and Documentaries</a></li>
                   <li><a href="#">Portraits</a></li>
                   <li><a href="#">Corporate/Academic & Social Events</a></li>
                   <li><a href="#">Branding and Portfolio Curation</a></li>
                   <li><a href="#">Introduction to Storytelling (Photography Class)</a></li>
-                </ul>
+                </ul> -->
               </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -116,7 +142,7 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/781E79FB-F490-4870-BA1B-5C08DA5DF0E8.JPG" class="img-fluid" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2Fv3ygr_dtjsrss.png?alt=media&token=afd6bfd7-c699-4544-ac05-94e571216530" class="img-fluid lazyload" alt="">
           </div>
           <div class="col-lg-5 content">
             <h2>Professional Photographer </h2>
@@ -179,8 +205,7 @@
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  I absolutely loved the media you provided, especially the calendar and movie. Thank you for doing such a fantastic job with my wedding memories. Your work means so much to me. May you always be blessed. Thank you!
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -197,13 +222,12 @@
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  TGS Studios perfectly captured the essence of our brand, showcasing their creativity and commitment to excellence throughout the project. They delivered exceptional results and provided valuable insights. We look forward to collaborating with them again.
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
+                  <h3>Institute of Chartered Secretaries and Administrators of Nigeria ( ICSAN )</h3>
+                  <h4></h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -215,8 +239,7 @@
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Choosing TGS Studios for our project was a great decision. Their professionalism and expertise shone from our first meeting to the final delivery. They understood our goals and exceeded our expectations with their attention to detail. Our customers have given us numerous compliments, and we are thrilled with the results!
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -233,8 +256,7 @@
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  TGS Studios exceeded our expectations with their innovative and technically proficient team. They tackled our project with a unique perspective, delivering both smart and visually stunning results. Thanks to their professionalism and efficiency, the process was smooth and enjoyable. We highly recommend TGS Studios for top-quality creative services.
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -251,8 +273,7 @@
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  TGS Studios exceeded our expectations with their innovative approach and technical expertise, delivering stunning and effective results. Their professionalism made the process smooth and enjoyable. We highly recommend them for creative services.
                 </p>
                 <div class="profile mt-auto">
                   <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
