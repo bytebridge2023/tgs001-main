@@ -1,330 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TGS Studios</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>TGS Studios</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link
+      href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6"
+      rel="icon"
+    />
+    <link
+      href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6"
+      rel="apple-touch-icon"
+    />
 
-  <!-- Favicons -->
-  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="icon">
-  <link href="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F1sba1_TGS_Favicon.png?alt=media&token=60f1dfc6-295c-4eda-8054-3b0a908056a6" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <script>
+      const images = document.querySelectorAll(".lazyload");
 
-<script>
-const images = document.querySelectorAll('.lazyload');
+      const options = {
+        root: document.querySelector("body"), // Change this to a specific container if needed
+        threshold: 0.5, // Image will load when 50% in viewport
+      };
 
-const options = {
-  root: document.querySelector('body'), // Change this to a specific container if needed
-  threshold: 0.5, // Image will load when 50% in viewport
-};
+      const lazyLoad = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove("lazyload");
+            observer.unobserve(img);
+          }
+        });
+      };
 
-const lazyLoad = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-      img.classList.remove('lazyload');
-      observer.unobserve(img);
-    }
-  });
-};
+      const observer = new IntersectionObserver(lazyLoad, options);
 
-const observer = new IntersectionObserver(lazyLoad, options);
+      images.forEach((image) => {
+        observer.observe(image);
+      });
+    </script>
+  </head>
 
-images.forEach((image) => {
-  observer.observe(image);
-});
-
-</script>
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F3cve2_tsg.png?alt=media&token=2202a32a-ff94-48bb-93fe-1af954b8e294" alt="">
-        <!-- <i class="bi bi-camera"></i>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-lg-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/tgsstudios-a4889.appspot.com/o/images%2F3cve2_tsg.png?alt=media&token=2202a32a-ff94-48bb-93fe-1af954b8e294"
+            alt=""
+          />
+          <!-- <i class="bi bi-camera"></i>
         <h1>Photography</h1> -->
-      </a>
+        </a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="Portraits.html">Portraits</a></li>
-              <!-- <li><a href="moving-stills.html">Moving Stills</a></li>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Gallery</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="Portraits.html">Portraits</a></li>
+                <!-- <li><a href="moving-stills.html">Moving Stills</a></li>
               <li><a href="Films.html">Films</a></li>
               <li><a href="Featured-Clients.html">Featured Clients</a></li>
               <li><a href="Still-Life.html">Still Life</a></li>
               <li><a href="gallery.html">Travel</a></li> -->
-              <!-- <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <!-- <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="#">Sub Menu 1</a></li>
                   <li><a href="#">Sub Menu 2</a></li>
                   <li><a href="#">Sub Menu 3</a></li>
                 </ul>
               </li> -->
-            </ul>
-          </li>
-          <li class=""><a href="services.html"><span>Services</span> <i class="active"></i></a>
-               <!-- <ul>
+              </ul>
+            </li>
+            <li class="">
+              <a href="services.html"
+                ><span>Services</span> <i class="active"></i
+              ></a>
+              <!-- <ul>
                   <li><a href="#">Films and Documentaries</a></li>
                   <li><a href="#">Portraits</a></li>
                   <li><a href="#">Corporate/Academic & Social Events</a></li>
                   <li><a href="#">Branding and Portfolio Curation</a></li>
                   <li><a href="#">Introduction to Storytelling (Photography Class)</a></li>
                 </ul> -->
-              </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav><!-- .navbar -->
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
 
-      <div class="header-social-links">
-        <a href="www.instagram.com/_tgsstudios" class="instagram"><i class="bi bi-instagram"></i></a>
-        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <div class="header-social-links">
+          <a href="https://instagram.com/_tgsstudios" class="instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
-      </div>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main" data-aos="fade" data-aos-delay="1500">
-
-    <!-- ======= End Page Header ======= -->
-    <div class="page-header d-flex align-items-center">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2>About</h2>
-            <p>Welcome to TGSStudios, where creativity meets innovation. We're dedicated to delivering exceptional
-              digital experiences that inspire and captivate. Join us as we shape the future.</p>
-
-            <a class="cta-btn" href="contact.html">Available for hire</a>
-
-          </div>
         </div>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       </div>
-    </div><!-- End Page Header -->
+    </header>
+    <!-- End Header -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+    <main id="main" data-aos="fade" data-aos-delay="1500">
+      <!-- ======= End Page Header ======= -->
+      <div class="page-header d-flex align-items-center">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>About</h2>
+              <p>
+                Welcome to TGSStudios, where creativity meets innovation. We're
+                dedicated to delivering exceptional digital experiences that
+                inspire and captivate. Join us as we shape the future.
+              </p>
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="/assets/img/gallery/781E79FB-F490-4870-BA1B-5C08DA5DF0E8.JPG" class="img-fluid lazyload" alt="">
-          </div>
-          <div class="col-lg-5 content">
-            <h2>Professional Photographer </h2>
-            <p class="fst-italic py-3">
-              Deyma Ayo, owner of TGS Studios, captures moments with passion and precision.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li> -->
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.tgsstudios.com</span></li>-->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+234 809 694 5023</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Lagos, NIGERIA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li> -->
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>deyma@tgsstudios.com</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
+              <a class="cta-btn" href="contact.html">Available for hire</a>
             </div>
-            <p class="fst-italic py-3">
-              Observing the nature of life always inspires me. I am in my element when I attune to the ebbs and flows of
-              a subject. I curate from every subject, animate to inanimate subjects - from singular to multiple
-              subjects; whether of an individual subject or of a multitude at a gathering of people or nature’s event.
-              Life happening in its fundamentals is my plain canvas… and I love to find a way to curate subjects into a
-              visual narrative
-            </p>
-            <p class="fst-italic m-0">
-              The most elemental aspect of photography is people. Even when there is no human in the image, a picture is
-              designed to engage someone’s eye. People are focal and it’s light that captures them...
-              I use the definitive light of a subject to understand and communicate life with the lens of a camera.
-            </p>
           </div>
         </div>
-
       </div>
-    </section><!-- End About Section -->
+      <!-- End Page Header -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img
+                src="/assets/img/gallery/781E79FB-F490-4870-BA1B-5C08DA5DF0E8.JPG"
+                class="img-fluid lazyload"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-5 content">
+              <h2>Professional Photographer</h2>
+              <p class="fst-italic py-3">
+                Deyma Ayo, owner of TGS Studios, captures moments with passion
+                and precision.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li> -->
+                    <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.tgsstudios.com</span></li>-->
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>+234 809 694 5023</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Lagos, NIGERIA</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li> -->
+                    <!-- <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li> -->
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Email:</strong> <span>deyma@tgsstudios.com</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="fst-italic py-3">
+                Observing the nature of life always inspires me. I am in my
+                element when I attune to the ebbs and flows of a subject. I
+                curate from every subject, animate to inanimate subjects - from
+                singular to multiple subjects; whether of an individual subject
+                or of a multitude at a gathering of people or nature’s event.
+                Life happening in its fundamentals is my plain canvas… and I
+                love to find a way to curate subjects into a visual narrative
+              </p>
+              <p class="fst-italic m-0">
+                The most elemental aspect of photography is people. Even when
+                there is no human in the image, a picture is designed to engage
+                someone’s eye. People are focal and it’s light that captures
+                them... I use the definitive light of a subject to understand
+                and communicate life with the lens of a camera.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Testimonials Section ======= -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h2>Testimonials</h2>
+            <p>What they are saying</p>
+          </div>
+
+          <div class="slides-3 swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    I absolutely loved the media you provided, especially the
+                    calendar and movie. Thank you for doing such a fantastic job
+                    with my wedding memories. Your work means so much to me. May
+                    you always be blessed. Thank you!
+                  </p>
+                  <div class="profile mt-auto">
+                    <img
+                      src="assets/img/testimonials/testimonials-1.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Oluwaseyi Adeniyi</h3>
+                    <h4></h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    TGS Studios perfectly captured the essence of our brand,
+                    showcasing their creativity and commitment to excellence
+                    throughout the project. They delivered exceptional results
+                    and provided valuable insights. We look forward to
+                    collaborating with them again.
+                  </p>
+                  <div class="profile mt-auto">
+                    <img
+                      src="assets/img/testimonials/testimonials-2.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>
+                      Institute of Chartered Secretaries and Administrators of
+                      Nigeria (ICSAN)
+                    </h3>
+                    <h4></h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+               <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    Choosing TGS Studios for our project was a great decision.
+                    Their professionalism and expertise shone from our first
+                    meeting to the final delivery. They understood our goals and
+                    exceeded our expectations with their attention to detail.
+                    Our customers have given us numerous compliments, and we are
+                    thrilled with the results!
+                  </p>
+                  <div class="profile mt-auto">
+                    <img
+                      src="assets/img/testimonials/testimonials-3.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Bello Olatunde</h3>
+                    <h4></h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item 
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    TGS Studios exceeded our expectations with their innovative
+                    and technically proficient team. They tackled our project
+                    with a unique perspective, delivering both smart and
+                    visually stunning results. Thanks to their professionalism
+                    and efficiency, the process was smooth and enjoyable. We
+                    highly recommend TGS Studios for top-quality creative
+                    services.
+                  </p>
+                  <div class="profile mt-auto">
+                    <img
+                      src="assets/img/testimonials/testimonials-4.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Matt Brandon</h3>
+                    <h4>Freelancer</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item 
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    TGS Studios exceeded our expectations with their innovative
+                    approach and technical expertise, delivering stunning and
+                    effective results. Their professionalism made the process
+                    smooth and enjoyable. We highly recommend them for creative
+                    services.
+                  </p>
+                  <div class="profile mt-auto">
+                    <img
+                      src="assets/img/testimonials/testimonials-5.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>John Larson</h3>
+                    <h4>Entrepreneur</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
       <div class="container">
-
-        <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>What they are saying</p>
+        <div class="copyright">
+          &copy; TGS <strong><span>STUDIO</span></strong
+          >. All Rights Reserved
         </div>
-
-        <div class="slides-3 swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  I absolutely loved the media you provided, especially the calendar and movie. Thank you for doing such a fantastic job with my wedding memories. Your work means so much to me. May you always be blessed. Thank you!
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  TGS Studios perfectly captured the essence of our brand, showcasing their creativity and commitment to excellence throughout the project. They delivered exceptional results and provided valuable insights. We look forward to collaborating with them again.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Institute of Chartered Secretaries and Administrators of Nigeria (ICSAN)</h3>
-                  <h4></h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Choosing TGS Studios for our project was a great decision. Their professionalism and expertise shone from our first meeting to the final delivery. They understood our goals and exceeded our expectations with their attention to detail. Our customers have given us numerous compliments, and we are thrilled with the results!
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  TGS Studios exceeded our expectations with their innovative and technically proficient team. They tackled our project with a unique perspective, delivering both smart and visually stunning results. Thanks to their professionalism and efficiency, the process was smooth and enjoyable. We highly recommend TGS Studios for top-quality creative services.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  TGS Studios exceeded our expectations with their innovative approach and technical expertise, delivering stunning and effective results. Their professionalism made the process smooth and enjoyable. We highly recommend them for creative services.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://technexus.icu/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://technexus.icu/photofolio-bootstrap-photography-website-template/ -->
+          Designed by <a href="https://bytebridge.services/">ByteBridge</a>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+    </footer>
+    <!-- End Footer -->
 
-  </main><!-- End #main -->
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; TGS <strong><span>STUDIO</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://technexus.icu/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://technexus.icu/photofolio-bootstrap-photography-website-template/ -->
-        Designed by <a href="https://bytebridge.services/">ByteBridge</a>
-      </div>
+    <div id="preloader">
+      <div class="line"></div>
     </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <div id="preloader">
-    <div class="line"></div>
-  </div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
